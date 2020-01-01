@@ -1,0 +1,4 @@
+{
+    "MongoURL":"mongodb://localhost:27017/devtricks",
+    "secretKey":"SecretAdmin"
+}

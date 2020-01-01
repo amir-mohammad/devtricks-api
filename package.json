@@ -1,0 +1,29 @@
+{
+  "name": "devtricks-api",
+  "version": "1.0.0",
+  "description": "an api for devtricks website",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amir-mohammad/devtricks-api.git"
+  },
+  "author": "mehdi samavat & amir azarbashi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amir-mohammad/devtricks-api/issues"
+  },
+  "homepage": "https://github.com/amir-mohammad/devtricks-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.3",
+    "nodemon": "^2.0.2"
+  }
+}

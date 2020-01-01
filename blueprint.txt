@@ -1,0 +1,20 @@
+1- user
+2- course
+3- adminuser
+        name
+        email
+        password
+        phonenumber
+        access    
+
+4-instructor
+//======================================================
+
+1- mongodb install server and compass //done
+2 - how to connect nodejs & express to mongodb //done
+3-mogoose //done
+4-model //done
+
+
+//=====================
+1 - how to protected url by jwt //done
