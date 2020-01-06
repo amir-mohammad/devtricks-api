@@ -1,13 +1,50 @@
 1- user
+        email
+        phonenumber
+        password
+        thumbnail
+        name
+        nation number
+        address
+        createAt
+
+
+
 2- course
-3- adminuser
+      *  title
+        degree
+        subtitle
+        syllabus
+        estimated time
+        PREREQUISITES
+        What You Will Learn
+        features
+        Student Reviews
+        lessons
+       * instractor
+        introductionVideo
+        tag
+        comments
+       * createAt
+        Poster
+        
+
+3- adminuser ->done
         name
         email
         password
         phonenumber
         access    
 
-4-instructor
+4-instructor ---> done
+        pic
+        name
+        degree
+        resume
+        email,
+        social
+        
+        
 //======================================================
 
 1- mongodb install server and compass //done

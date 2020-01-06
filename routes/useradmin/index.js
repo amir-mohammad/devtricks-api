@@ -63,15 +63,25 @@ route.post(
 //login
 
 route.post("/login", async (req, res) => {
-  const useradmin = {
-    id: 1,
-    name: "amir azarbshi",
-    email: "amirm.azarbashi@gmail.com",
-    password: "123456"
-  };
+  const { email, password } = req.body;
+  try {
+    const userAdmin = await Useradmin.findOne({ email });
+  if (userAdmin) {
+    const match = await bcryptJs.compare(password, userAdmin.password);
+    if (match) {
+      const token = await jwt.sign({user:{id:userAdmin.id}}, config.get("secretKey"),{expiresIn:"1h"});
+      
 
-  const token = await jwt.sign({ user: useradmin.id }, config.get("secretKey"));
-  res.json({ token });
+      res.json({ token });
+    } else {
+      res.status(401).json({ message: "password is not valid" });
+    }
+  } else {
+    res.status(401).json({ message: "user is not exist" });
+  }
+  } catch (error) {
+    res.status(500).json({message:"internal server err"+ error})
+  }
 });
 
 route.post("/auth", auth, (req, res) => {
